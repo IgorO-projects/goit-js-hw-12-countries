@@ -18,14 +18,15 @@ function findCountries() {
         refs.container.innerHTML = '';
     }
 
-    if(refs.input.value) {
+    if(refs.input.value.trim()) {
 
     fetchCountries(refs.input.value)
     .then(array => { 
         pageRender(array);
     })
-    .catch(()=> {
+    .catch((err)=> {
         pnotify.error('wrong country');
+        console.log(err);
     });
     } 
 };

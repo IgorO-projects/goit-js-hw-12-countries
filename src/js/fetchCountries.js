@@ -10,6 +10,7 @@ function fetchCountries (name) {
                 resolve(response.json());
             }
         })
+        // return response.json();
     });
 }
 
